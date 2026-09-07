@@ -23,7 +23,7 @@ export default function About() {
         <div className="grid grid-cols-3 gap-6 mt-12 pt-10 border-t-2" style={{ borderTopColor: '#FF8C42' }}>
           {[
             { value: '14+', label: 'Years in Solutions Pre-sales' },
-            { value: '3', label: 'Sales & Adoption Experiences with Korean Enterprise (Samsung, LG, Hyundai)' },
+            { value: '+20', label: 'Sales & Adoption Engagements with Korean Enterprises (Samsung, LG, Hyundai, and many more)' },
             { value: 'KAIST', label: 'MBA · AI / ML' },
           ].map(({ value, label }) => (
             <div key={label}>
