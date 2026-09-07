@@ -1,57 +1,63 @@
 // ExpertiseAreas — 3 expertise boxes with orange theme on white background
 
-const BriefcaseIcon = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+const HandshakeIcon = ({ className, style }) => (
+  <svg className={className} style={style} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round"
-      d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" />
+      d="M13 8l3-3m0 0l3 3m-3-3v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2h5" />
     <path strokeLinecap="round" strokeLinejoin="round"
-      d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+      d="M8 21h8" />
   </svg>
 );
 
-const DatabaseIcon = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-    <ellipse cx="12" cy="5" rx="9" ry="3" />
-    <path strokeLinecap="round" d="M3 5v14c0 1.657 4.03 3 9 3s9-1.343 9-3V5" />
-    <path strokeLinecap="round" d="M3 12c0 1.657 4.03 3 9 3s9-1.343 9-3" />
+const SparkIcon = ({ className, style }) => (
+  <svg className={className} style={style} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round"
+      d="M12 3v3m0 12v3m9-9h-3M6 12H3m14.485-6.485l-2.121 2.121M8.636 15.364l-2.121 2.121m0-12.728l2.121 2.121m6.728 6.728l2.121 2.121" />
+    <circle cx="12" cy="12" r="3" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
-const UsersIcon = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+const ShieldIcon = ({ className, style }) => (
+  <svg className={className} style={style} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round"
-      d="M17 20h5v-2a4 4 0 00-5-3.87M9 20H4v-2a4 4 0 015-3.87M16 7a4 4 0 11-8 0 4 4 0 018 0zM22 20v-2a4 4 0 00-3-3.87M2 20v-2a4 4 0 013-3.87" />
+      d="M12 2l8 4v6c0 5-3.5 9.5-8 10-4.5-.5-8-5-8-10V6l8-4z" />
+    <path strokeLinecap="round" strokeLinejoin="round"
+      d="M9 12l2 2 4-4" />
   </svg>
 );
 
 const areas = [
   {
-    Icon: BriefcaseIcon,
-    title: 'Pre-Sales Technical Excellence',
+    Icon: HandshakeIcon,
+    title: 'Strategic Customer Success',
     points: [
-      'Use case scoping & validation',
-      'Technical champion building',
-      'POC execution & governance',
+      'Strategic account & success planning',
+      'Quarterly Business Reviews',
+      'Usage & consumption planning',
+      'Value realization & underutilization recovery',
+      'Executive stakeholder management',
     ],
   },
   {
-    Icon: DatabaseIcon,
-    title: 'Data-First Technology Adoption',
+    Icon: SparkIcon,
+    title: 'Enterprise AI Adoption & Enablement',
     points: [
+      'Claude adoption enablement',
+      'Agentic workflow design',
+      'Train the Trainer programs',
+      'Center of Excellence development',
+      'Multi-region change management',
+    ],
+  },
+  {
+    Icon: ShieldIcon,
+    title: 'AI Governance & Trust',
+    points: [
+      'AI security review readiness',
+      'ISMS / ISMS-P certification experience',
+      'LLM governance & prompt design',
+      'Data protection compliance',
       'Enterprise data architecture',
-      'Master data management',
-      'Real-time pipeline design',
-      'Salesforce Data Cloud 5+ years',
-    ],
-  },
-  {
-    Icon: UsersIcon,
-    title: 'Enterprise Leadership',
-    points: [
-      'C-suite to engineering communication',
-      'Cross-regional team enablement',
-      'Korea / APAC market expertise',
-      'Technology governance & compliance',
     ],
   },
 ];
@@ -63,7 +69,7 @@ export default function ExpertiseAreas() {
         <div className="text-center mb-14">
           <h2 className="text-4xl md:text-5xl font-extrabold text-navy">Expertise Areas</h2>
           <p className="text-gray-500 mt-3 max-w-xl mx-auto">
-            Three pillars that define how I drive enterprise technology from idea to production.
+            Three pillars that define how I drive enterprise AI adoption and customer success — from PoC to sustained production value.
           </p>
         </div>
 
@@ -71,7 +77,7 @@ export default function ExpertiseAreas() {
           {areas.map(({ Icon, title, points }) => (
             <div
               key={title}
-              className="bg-white rounded-xl shadow-sm border-t-4 
+              className="bg-white rounded-xl shadow-sm border-t-4
                           p-7 flex flex-col gap-4 hover:shadow-md transition-shadow duration-200"
               style={{ borderTopColor: '#FF8C42' }}
             >
