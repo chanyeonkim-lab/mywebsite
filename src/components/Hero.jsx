@@ -12,7 +12,7 @@ export default function Hero() {
           {/* Left: Text Content */}
           <div>
             <p className="text-orange font-semibold tracking-wide uppercase text-sm mb-4">
-              AI Architect
+              Enterprise AI Adoption Leader
             </p>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-navy leading-tight mb-6">
@@ -67,7 +67,7 @@ export default function Hero() {
               >
                 <img
                   src="/images/profile.png"
-                  alt="Chanyeon Kim - AI Architect"
+                  alt="Chanyeon Kim - Enterprise AI Adoption Leader"
                   className="w-full h-full object-cover"
                 />
               </div>
